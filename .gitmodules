@@ -1,0 +1,4 @@
+[submodule "global-assets"]
+	path = global-assets
+	url = https://github.com/SWEasabi/global-assets
+	branch = main
