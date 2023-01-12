@@ -1,0 +1,57 @@
+\documentclass{report}
+\input{config}
+
+\renewcommand{\title}{
+    Piano di qualifica
+    
+    \tiny Versione documento: \textit{V0.0.1}
+}
+
+\newcommand{\people}{
+    \normalsize
+    \begin{center}
+        \begin{tabularx}{7cm}{l | X}            
+            \textbf{Uso} & Esterno\\
+            \textbf{Destinatario} & Committente\\
+            & Cliente \\
+        \end{tabularx}
+    \end{center}
+}
+
+\fancypagestyle{plain}{%
+    \fancyhead{} % clear all header fields
+    \fancyhead[L]{\leftmark}
+    \fancyhead[R]{\textit{SWEasabi} \includegraphics[height=30pt]{\gassets global-assets/img/loghi/SWEasabi_compact_logo.png}}
+    \fancyfoot{} % clear all footer fields
+    \fancyfoot[L]{\thepage}
+    \fancyfoot[R]{Piano di qualifica}
+}
+
+\begin{document}
+
+\pagestyle{fancy}
+
+\fancyhead{} % clear all header fields
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\textit{SWEasabi} \includegraphics[height=30pt]{\gassets global-assets/img/loghi/SWEasabi_compact_logo.png}}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\thepage}
+\fancyfoot[R]{Piano di qualifica}
+
+
+\input{\gassets global-assets/tex/header}
+\thispagestyle{empty}
+\clearpage
+%\pagenumbering{Roman}
+%\input{registro-modifiche}
+
+\tableofcontents
+\clearpage
+\pagenumbering{arabic}
+\input{contenuti/introduzione}
+\input{contenuti/qualita-di-processo.tex}
+\input{contenuti/qualita-di-prodotto.tex}
+\input{contenuti/specifica-dei-test.tex}
+\input{contenuti/valutazioni-per-il-miglioramento.tex}
+
+\end{document}
