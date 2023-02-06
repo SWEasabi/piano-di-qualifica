@@ -1,21 +1,63 @@
 \chapter{Qualità di processo}\label{qualita-di-processo}
 
 \section{Introduzione}
+Lo standard utilizzato per la qualità dei processi è il ISO/IEC 12207:1995, con particolare attenzione ad alcuni processi che verranno esposti di seguito.
 
 \section{Processi primari}
-
 \subsection{Fornitura}
+Con processo di fornitura si intende tutte le attività atte a selezionare risorse e procedure necessarie per portare a termine il progetto. 
+
+\textbf{Metriche}
+\begin{itemize}
+    \item \textbf{MPC01: Budget At Completion}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Valore preventivato per la realizzazione del progetto;
+        \item \textbf{Metrica di misurazione}: Costo in euro;
+        \item \textbf{Valore ottimale}: Valore preventivato;
+        \item \textbf{Soglia accettabile}: <= 10\%.
+    \end{itemize}
+    \item \textbf{MPC02: Budget Variance}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica se alla data corrente la spesa effettiva è in difetto o in cesso rispetto a quella preventivata;
+        \item \textbf{Metrica di misurazione}: Costo in euro, calcolato attraverso la seguente formula: \textbf{BV = BCWS - ACWP}
+        \begin{itemize}
+            \item \textbf{BV} indica \textbf{B}udget \textbf{V}ariance;
+            \item \textbf{BCWS} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{S}cheduled, ossia il costo previsto (in euro) per realizzare delle attività alla data corrente;
+            \item \textbf{ACWP} indica \textbf{A}ctual \textbf{C}ost of \textbf{W}ork \textbf{P}erformed, ossia il costo effettivo (in euro) della realizzazione delle suddette attività.
+        \end{itemize}
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: <= 10\%.
+    \end{itemize}
+    \item \textbf{MPC03: Schedule Variance}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica se il progetto è in linea, in anticipo o in ritardo rispetto alle attese alla data preventivata;
+        \item \textbf{Metrica di misurazione}: Giorni, calcolati attraverso la seguente formula: \textbf{SV = BCWP - BCWS}
+        \begin{itemize}
+            \item \textbf{SV} indica \textbf{S}chedule \textbf{V}ariance;
+            \item \textbf{BCWP} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{P}erformed indica il valore (in giorni) delle attività realizzata alla data corrente;
+            \item \textbf{BCWS} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{S}cheduled, ossia il costo previsto (in giorni) per realizzare delle attività alla data corrente;
+        \end{itemize}
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: <= 7 giorni.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Sviluppo}
 
+
 \subsubsection{Analisi dei requisiti}
+
 
 \subsubsection{Design e progettazione}
 
+
 \subsubsection{Codifica}
+
 
 \section{Processi di supporto}
 
+
 \subsection{Documentazione}
+
 
 \subsection{Validazione}
