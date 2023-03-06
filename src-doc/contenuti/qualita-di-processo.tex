@@ -77,7 +77,8 @@ Con progettazione si intende la trasformazione dei requisiti in modello architet
         \item \textbf{Spiegazione}: Indica il numero di moduli che un determinato modulo utilizza. Un valore alto indica eccessiva complessità o dipendenza.
         \item \textbf{Metrica di misurazione}: Numero intero;
         \item \textbf{Valore ottimale}: 0 ≥ x ≥ 5; 
-        \item \textbf{Soglia accettabile}: 8 ≥. % non saprei sulle soglie onestamente
+        \item \textbf{Soglia accettabile}: 8 ≥. 
+        \item \textbf{Nota}: Il valore ideale e il valore di accettazione per questa metrica sono provvisori e potrebbero subire modifiche nelle prossime versioni del Piano di Qualifica.
     \end{itemize}
 \end{itemize}
 
@@ -100,7 +101,7 @@ Con codifica si indica il processo di scrittura del codice software attraverso l
 \subsection{Documentazione}
 Con processo di documentazione si intende la creazione, gestione e mantenimento dei documenti di un progetto software. Questo include tutti i documenti prodotti durante il ciclo di vita del software, da specifiche dei requisiti a manuali utente, che è fondamentale siano comprensibili e di facile lettura. Di seguito le metriche utilizzate:
 \begin{itemize}
-    \item \textbf{MPC: Indice di Gulpease}
+    \item \textbf{MPC8: Indice di Gulpease}
     \begin{itemize}
         \item \textbf{Spiegazione}: Si tratta di un indice di leggibilità del testo;
         \item \textbf{Metrica di misurazione}: Numero intero, calcolato attraverso la seguente formula: \textbf{$89 + \frac{300*(NF)-10*(NL)}{NP}$};
@@ -115,7 +116,7 @@ Con processo di documentazione si intende la creazione, gestione e mantenimento 
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{MPC: Correttezza ortografica}
+    \item \textbf{MPC9: Correttezza ortografica}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica il numero di errori grammaticali presenti nel testo;
         \item \textbf{Metrica di misurazione}: Numero intero;
@@ -128,7 +129,7 @@ Con processo di documentazione si intende la creazione, gestione e mantenimento 
 Il processo di verifica ha come obiettivo quello di controllare e verificare il prodotto software per garantire che funzioni correttamente secondo le specifiche tecniche e i requisiti del progetto. Di seguito le metriche utilizzate:
 
 \begin{itemize}
-    \item \textbf{MPC: Code Coverage}
+    \item \textbf{MPC10: Code Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di codice eseguito durante una particolare suite di test;
         \item \textbf{Metrica di misurazione}: Numero percentuale;
@@ -138,7 +139,7 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{MPC: Statement Coverage}
+    \item \textbf{MPC11: Statement Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di comandi (statement) eseguiti almeno una volta dall'insieme di test sull'unità;
         \item \textbf{Metrica di misurazione}: Numero percentuale;
@@ -148,7 +149,7 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{MPC: Branch Coverage}
+    \item \textbf{MPC12: Branch Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di rami (branch) del flusso di controllo dell'unità che viene attraversata almeno una volta da un test, con esito corretto;
         \item \textbf{Metrica di misurazione}: Numero percentuale;
@@ -158,7 +159,7 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
 \end{itemize}
 
 \begin{itemize}
-    \item \textbf{MPC: Decision/Condition Coverage}
+    \item \textbf{MPC13: Decision/Condition Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di branch che risultano almeno una volta true e almeno una volta false in un test dedicato;
         \item \textbf{Metrica di misurazione}: Numero percentuale;
