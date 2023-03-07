@@ -72,6 +72,7 @@ Con progettazione si intende la trasformazione dei requisiti in modello architet
         \item \textbf{Valore ottimale}: ≥ 1;
         \item \textbf{Soglia accettabile}: ≥ 1.
     \end{itemize}
+
     \item \textbf{MPC6: Structural fan-out}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica il numero di moduli che un determinato modulo utilizza. Un valore alto indica eccessiva complessità o dipendenza.
@@ -113,9 +114,7 @@ Con processo di documentazione si intende la creazione, gestione e mantenimento 
         \item \textbf{Valore ottimale}: 80-100;
         \item \textbf{Soglia accettabile}: 60-100.
     \end{itemize}
-\end{itemize}
 
-\begin{itemize}
     \item \textbf{MPC9: Correttezza ortografica}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica il numero di errori grammaticali presenti nel testo;
@@ -136,9 +135,7 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
         \item \textbf{Valore ottimale}: 90-100\%;
         \item \textbf{Soglia accettabile}: 80\%.
     \end{itemize}
-\end{itemize}
 
-\begin{itemize}
     \item \textbf{MPC11: Statement Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di comandi (statement) eseguiti almeno una volta dall'insieme di test sull'unità;
@@ -146,9 +143,7 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
         \item \textbf{Valore ottimale}: 90-100\%;
         \item \textbf{Soglia accettabile}: 80\%.
     \end{itemize}
-\end{itemize}
 
-\begin{itemize}
     \item \textbf{MPC12: Branch Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di rami (branch) del flusso di controllo dell'unità che viene attraversata almeno una volta da un test, con esito corretto;
@@ -156,15 +151,28 @@ Il processo di verifica ha come obiettivo quello di controllare e verificare il 
         \item \textbf{Valore ottimale}: 90-100\%;
         \item \textbf{Soglia accettabile}: 80\%.
     \end{itemize}
-\end{itemize}
 
-\begin{itemize}
     \item \textbf{MPC13: Decision/Condition Coverage}
     \begin{itemize}
         \item \textbf{Spiegazione}: Indica la percentuale di branch che risultano almeno una volta true e almeno una volta false in un test dedicato;
         \item \textbf{Metrica di misurazione}: Numero percentuale;
         \item \textbf{Valore ottimale}: 80-100\%;
         \item \textbf{Soglia accettabile}: 70\%.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestione della qualità}
+\begin{itemize}
+    \item \textbf{MPC14: Quality Metrics Satisfied}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di metriche di qualità soddisfatte;
+        \item \textbf{Metrica di misurazione}: Numero percentuale, calcolato attraverso la seguente formula: \textbf{$\frac{QMS)}{TQM}*100$}, ovvero:
+            \begin{itemize}
+                \item \textbf{Q}uality \textbf{M}etrics \textbf{S}atisfied: metriche di qualità soddisfatte;
+                \item \textbf{T}otal \textbf{Q}uality \textbf{M}etrics: metriche di qualità totali;
+            \end{itemize}
+        \item \textbf{Valore ottimale}: 100\%;
+        \item \textbf{Soglia accettabile}: 90\%.
     \end{itemize}
 \end{itemize}
 
