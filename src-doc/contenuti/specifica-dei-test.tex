@@ -1,11 +1,20 @@
 \chapter{Specifica dei test}\label{specifica-dei-test}
+L'analisi dinamica consiste nell'esecuzione di vari oggetti di prova allo scopo di studiare il comportamento del programma in un insieme finito di casi rappresentativi di tutte le possibili esecuzioni del codice. Ogni esecuzione rappresenta un test, che possono essere di vario tipo, qui di seguito elencati.
+Il gruppo SWEasabi ha deciso che, per perseguire la maggior correttezza del prodotto possibile, l'attività di verifica verrà svolta in parallelo allo sviluppo. L'obiettivo da perseguire sarà quindi quello di rendere i test il più automatici possibile allo scopo di non rallentare il processo di sviluppo.
+
+Inoltre, giudicando prematura la definizione dei test in questa fase, il gruppo ha deciso di definirli nelle successive versioni di questo documento.
 
 \section{Test di unità}
+I test di unità hanno come scopo quello di dimostrare la correttezza di ciascuna unità individualmente, arrivando al 100\% quando ogni singola unità è stata testata con esito positivo. 
 
 \section{Test di integrazione}
+I test di integrazione verificano l'integrazione tra le componenti software, ovvero che due o più unità già testate con esito positivo lavorino insieme in modo corretto generando il risultato e comportamento atteso.
 
 \section{Test di sistema}
+I test di sistema si occupano di verificare il comportamento del sistema, controllando che aderisca correttamente ai requisiti software individuati nell'Analisi dei Requisiti.
 
 \section{Test di accettazione}
+I test di accettazione costituiscono il collaudo del prodotto, svolto in presenza del committente, con lo scopo di verificare il soddisfacimento di tutti i requisiti richiesti e definiti nell'Analisi dei Requisiti.
 
 \section{Test di regressione}
+I test di regressione hanno l'obiettivo di identificare eventuali errori ausati da modifiche introdotte in nuove versioni del prodotto, verificando quindi che parti del sistema già testate non vengano danneggiate da nuovi componenti.
