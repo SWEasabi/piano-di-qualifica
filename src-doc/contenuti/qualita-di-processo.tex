@@ -1,21 +1,179 @@
 \chapter{Qualità di processo}\label{qualita-di-processo}
 
 \section{Introduzione}
+Lo standard utilizzato per la qualità dei processi è il ISO/IEC 12207:1995, con particolare attenzione ad alcuni processi che verranno esposti di seguito.
 
 \section{Processi primari}
-
 \subsection{Fornitura}
+Con processo di fornitura si intendono tutte le attività atte a selezionare risorse e procedure necessarie per portare a termine il progetto. 
+
+\textbf{Metriche}
+\begin{itemize}
+    \item \textbf{MPC01: Budget At Completion}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Valore preventivato per la realizzazione del progetto;
+        \item \textbf{Metrica di misurazione}: Costo in euro;
+        \item \textbf{Valore ottimale}: Valore preventivato;
+        \item \textbf{Soglia accettabile}: <= 10\%.
+    \end{itemize}
+    \item \textbf{MPC02: Budget Variance}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica se alla data corrente la spesa effettiva è in difetto o in cesso rispetto a quella preventivata;
+        \item \textbf{Metrica di misurazione}: Costo in euro, calcolato attraverso la seguente formula: \texttt{BV = BCWS - ACWP}
+        \begin{itemize}
+            \item \textbf{BV} indica \textbf{B}udget \textbf{V}ariance;
+            \item \textbf{BCWS} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{S}cheduled, ossia il costo previsto (in euro) per realizzare delle attività alla data corrente;
+            \item \textbf{ACWP} indica \textbf{A}ctual \textbf{C}ost of \textbf{W}ork \textbf{P}erformed, ossia il costo effettivo (in euro) della realizzazione delle suddette attività.
+        \end{itemize}
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: <= 10\%.
+    \end{itemize}
+    \item \textbf{MPC03: Schedule Variance}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica se il progetto è in linea, in anticipo o in ritardo rispetto alle attese alla data preventivata;
+        \item \textbf{Metrica di misurazione}: Giorni, calcolati attraverso la seguente formula: \texttt{SV = BCWP - BCWS}
+        \begin{itemize}
+            \item \textbf{SV} indica \textbf{S}chedule \textbf{V}ariance;
+            \item \textbf{BCWP} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{P}erformed indica il valore (in giorni) delle attività realizzata alla data corrente;
+            \item \textbf{BCWS} indica \textbf{B}udgeted \textbf{C}ost of \textbf{W}ork \textbf{S}cheduled, ossia il costo previsto (in giorni) per realizzare delle attività alla data corrente;
+        \end{itemize}
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: <= 7 giorni.
+    \end{itemize}
+\end{itemize}
 
 \subsection{Sviluppo}
+Con processo di sviluppo si intendono tutte le attività che contribuiscono alla realizzazione del prodotto effettivo. 
 
-\subsubsection{Analisi dei requisiti}
+\subsubsection{Analisi dei requisiti} 
+Con analisi dei requisiti si indicano i processi di identificazione, documentazione e documentazione dei requisiti di un progetto software, ossia quello che il sistema deve essere in grado di fare per soddisfare le esigenze. Di seguito le metriche utilizzate:
+%non so se mi convince ma non mi viene in mente altro
+\begin{itemize}
+    \item \textbf{MPC4: Copertura dei requisiti}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di requisiti (funzionali, di qualità o di vincolo) obbligatori e non individuati nel documento di requisiti, calcolato attraverso la seguente formula:
+        \item \textbf{Metrica di misurazione}: Numero in percentuale, calcolato attraverso la seguente formula: \textbf{$\frac{RI}{RT} * 100$};
+            \begin{itemize}
+                \item \textbf{RI} indica \textbf{R}equisiti \textbf{I}ndividuati;
+                \item \textbf{RT} indica \textbf{R}equisiti \textbf{T}otali;
+            \end{itemize}
+        \item \textbf{Valore ottimale}: 100\%;
+        \item \textbf{Soglia accettabile}: 100\%.
+    \end{itemize}
+\end{itemize}
 
 \subsubsection{Design e progettazione}
+Con progettazione si intende la trasformazione dei requisiti in modello architetturale del sistema. Di seguito le metriche utilizzate:
+\begin{itemize}
+    \item \textbf{MPC5: Structural fan-in}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica il numero di componenti del software che utilizza un determinato modulo. Un valore alto indica un modulo molto riutilizzabile.
+        \item \textbf{Metrica di misurazione}: Numero intero;
+        \item \textbf{Valore ottimale}: ≥ 1;
+        \item \textbf{Soglia accettabile}: ≥ 1.
+    \end{itemize}
+
+    \item \textbf{MPC6: Structural fan-out}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica il numero di moduli che un determinato modulo utilizza. Un valore alto indica eccessiva complessità o dipendenza.
+        \item \textbf{Metrica di misurazione}: Numero intero;
+        \item \textbf{Valore ottimale}: 0 ≤ x ≤ 5;; 
+        \item \textbf{Soglia accettabile}: ≤ 8. 
+        \item \textbf{Nota}: Il valore ideale e il valore di accettazione per questa metrica sono provvisori e potrebbero subire modifiche nelle prossime versioni del Piano di Qualifica.
+    \end{itemize}
+\end{itemize}
 
 \subsubsection{Codifica}
+Con codifica si indica il processo di scrittura del codice software attraverso linguaggi di programmazione e strumenti di sviluppo software. Di seguito le metriche utilizzate:
+\begin{itemize}
+    \item \textbf{MPC7: Dead Code Variables}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica il numero di variabili dichiarate ma mai utilizzate dal codice, sprecando memoria.
+        \item \textbf{Metrica di misurazione}: Numero intero;
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: 0.
+    \end{itemize}
+\end{itemize}
+
 
 \section{Processi di supporto}
 
-\subsection{Documentazione}
 
-\subsection{Validazione}
+\subsection{Documentazione}
+Con processo di documentazione si intende la creazione, gestione e mantenimento dei documenti di un progetto software. Questo include tutti i documenti prodotti durante il ciclo di vita del software, da specifiche dei requisiti a manuali utente, che è fondamentale siano comprensibili e di facile lettura. Di seguito le metriche utilizzate:
+\begin{itemize}
+    \item \textbf{MPC8: Indice di Gulpease}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Si tratta di un indice di leggibilità del testo;
+        \item \textbf{Metrica di misurazione}: Numero intero, calcolato attraverso la seguente formula: \textbf{$89 + \frac{300*(NF)-10*(NL)}{NP}$};
+            \begin{itemize}
+                \item \textbf{NF} indica \textbf{N}umero \textbf{F}rasi;
+                \item \textbf{NL} indica \textbf{N}umero \textbf{L}ettere;
+                \item \textbf{NP} indica \textbf{N}umero \textbf{P}arole;
+            \end{itemize}
+        \item \textbf{Valore ottimale}: 80-100;
+        \item \textbf{Soglia accettabile}: 60-100.
+    \end{itemize}
+
+    \item \textbf{MPC9: Correttezza ortografica}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica il numero di errori grammaticali presenti nel testo;
+        \item \textbf{Metrica di misurazione}: Numero intero;
+        \item \textbf{Valore ottimale}: 0;
+        \item \textbf{Soglia accettabile}: <= 5\%.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Verifica}
+Il processo di verifica ha come obiettivo quello di controllare e verificare il prodotto software per garantire che funzioni correttamente secondo le specifiche tecniche e i requisiti del progetto. Di seguito le metriche utilizzate:
+
+\begin{itemize}
+    \item \textbf{MPC10: Code Coverage}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di codice eseguito durante una particolare suite di test;
+        \item \textbf{Metrica di misurazione}: Numero percentuale;
+        \item \textbf{Valore ottimale}: 90-100\%;
+        \item \textbf{Soglia accettabile}: 80\%.
+    \end{itemize}
+
+    \item \textbf{MPC11: Statement Coverage}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di comandi (statement) eseguiti almeno una volta dall'insieme di test sull'unità;
+        \item \textbf{Metrica di misurazione}: Numero percentuale;
+        \item \textbf{Valore ottimale}: 90-100\%;
+        \item \textbf{Soglia accettabile}: 80\%.
+    \end{itemize}
+
+    \item \textbf{MPC12: Branch Coverage}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di rami (branch) del flusso di controllo dell'unità che viene attraversata almeno una volta da un test, con esito corretto;
+        \item \textbf{Metrica di misurazione}: Numero percentuale;
+        \item \textbf{Valore ottimale}: 90-100\%;
+        \item \textbf{Soglia accettabile}: 80\%.
+    \end{itemize}
+
+    \item \textbf{MPC13: Decision/Condition Coverage}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di branch che risultano almeno una volta \textit{true} e almeno una volta \textit{false} in un test dedicato;
+        \item \textbf{Metrica di misurazione}: Numero percentuale;
+        \item \textbf{Valore ottimale}: 80-100\%;
+        \item \textbf{Soglia accettabile}: 70\%.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Gestione della qualità}
+\begin{itemize}
+    \item \textbf{MPC14: Quality Metrics Satisfied}
+    \begin{itemize}
+        \item \textbf{Spiegazione}: Indica la percentuale di metriche di qualità soddisfatte;
+        \item \textbf{Metrica di misurazione}: Numero percentuale, calcolato attraverso la seguente formula: \textbf{$\frac{QMS}{TQM}*100$}, ovvero:
+            \begin{itemize}
+                \item \textbf{Q}uality \textbf{M}etrics \textbf{S}atisfied: metriche di qualità soddisfatte;
+                \item \textbf{T}otal \textbf{Q}uality \textbf{M}etrics: metriche di qualità totali;
+            \end{itemize}
+        \item \textbf{Valore ottimale}: 100\%;
+        \item \textbf{Soglia accettabile}: 90\%.
+    \end{itemize}
+\end{itemize}
+
+%\subsection{Validazione} non mi viene in mente nessuna metrica da inserire: credo si possa anche eliminare dal PDQ
