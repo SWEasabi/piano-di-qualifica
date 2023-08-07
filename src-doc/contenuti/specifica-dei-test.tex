@@ -44,13 +44,16 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
         Unità & Si verifica il corretto funzionamento dei metodi per il recupero delle chiavi & Superato\\
         Unità & Si verifica il corretto funzionamento dei metodi per il recupero della password (hash) & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo per eseguire il logout & Superato\\
-
-        % Unità &  & Non implementato\\
         \hline
-        Integrazione & Descrizione Test & Non implementato\\
-        Integrazione & Descrizione Test & Non implementato\\
-        Integrazione & Descrizione Test & Non implementato\\
-        Integrazione & Descrizione Test & Non implementato\\
+        Integrazione & Si verifica che un misuratore abbia id 0 prima del salvataggio & Superato\\
+        Integrazione & Si verifica che un misuratore non abbia id 0 dopo il salvataggio & Superato\\
+        Integrazione & Si verifica che un sensore, un lampione o un'area abbia id 0 prima del salvataggio & Superato\\
+        Integrazione & Si verifica che un sensore, un lampione o un'area non abbia id 0 dopo il salvataggio & Superato\\
+        Integrazione & Si verifica che la ricerca di un sensore non esistente, di un lampione non esistente o di un'area non esistente ritorni un id non valido & Superato\\
+        Integrazione & Si verifica che la ricerca di un sensore esistente, di un lampione esistente o di un'area esistente ritorni un id valido & Superato\\
+        Integrazione & Si verifica che, all'inserimento di un sensore o di un lampione, il misuratore abbia id uguale & Superato\\
+        Integrazione & Si verifica che l'inserimento di un sensore, di un lampione o di un'area avvenga in modo corretto & Superato\\
+        Integrazione & Si verifica che un sensore eliminato, un lampione eliminato o un'area eliminata abbia un id non valido & Superato\\
         \hline
         Sistema & Il sistema deve mostrare un messaggio d'errore esplicativo all'utente in caso di errore di autenticazione & Non implementato\\
         Sistema & Ogni cambiamento di stato di un lampione deve apparire automaticamente nell'interfaccia utente & Non implementato\\
