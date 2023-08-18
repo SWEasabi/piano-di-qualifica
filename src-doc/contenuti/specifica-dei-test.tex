@@ -18,3 +18,158 @@ I test di accettazione costituiscono il collaudo del prodotto, svolto in presenz
 
 \section{Test di regressione}
 I test di regressione hanno l'obiettivo di identificare eventuali errori ausati da modifiche introdotte in nuove versioni del prodotto, verificando quindi che parti del sistema già testate non vengano danneggiate da nuovi componenti.
+
+\section{Stato dei test}
+
+\begin{center}
+    \begin{xltabular}{\linewidth}{|l|X|l|}
+        \hline
+        \textbf{Tipologia} & \textbf{Descrizione} & \textbf{Stato}\\
+        \hline
+        & \textbf{Microservizio Autenticazione} & \\
+        Unità & Si verifica il corretto funzionamento del metodo di autenticazione in caso di credenziali corrette fornite & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo di autenticazione in caso di credenziali errate fornite & Non implementato\\
+        Unità & Si verifica il corretto funzionamento dei verificatori dei token & Superato\\
+        Unità & Si verifica che il metodo \texttt{issueRefreshToken} produca il risultato atteso & Superato\\
+        Unità & Si verifica che il metodo \texttt{issueAccessToken} produca il risultato atteso & Superato\\
+        Unità & Si verifica che il metodo \texttt{updateRefreshToken} produca il risultato atteso & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per invalidare un token & Non implementato\\
+        Unità & Si verifica che la creazione della classe JwtExtractor avvenga in modo corretto in caso di campi non validi & Superato\\
+        Unità & Si verifica che l'estrazione dello username produca il risultato atteso & Superato\\
+        Unità & Si verifica che la creazione della classe JwtPackager avvenga in modo corretto in caso di campi non validi & Non implementato\\
+        Unità & Si verifica che il metodo \texttt{pack} produca il risultato atteso & Superato\\
+        Unità & Si verifica che la creazione della classe LoginResult avvenga in modo corretto in caso di campi non validi & Non implementato\\
+        Unità & Si verifica il corretto funzionamento dei metodi che ritornano le informazioni richieste & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per il controllo di un utente in blacklist & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per aggiungere un utente alla blacklist & Non implementato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per il recupero delle chiavi & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per il recupero della password (hash) & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per eseguire il logout & Superato\\
+        & \textbf{Microservizio Anagrafe} &\\
+        Unità & Si verifica che la costruzione degli oggetti Lampione, Sensore, Misuratore od Area avvenga in modo corretto & Superato\\
+        Unità & Si verifica che la costruzione di copia dell'oggetto Area avvenga in modo corretto & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per la conversione a String dell'oggetto Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi che ritornano il Misuratore dal rispettivo Sensore o Lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il Sensore dal Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il Lampione dal Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi che ritornano l'id del Lampione, del Sensore, del Misuratore e dell'Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi che consentono di impostare l'id del Lampione, del Sensore, del Misuratore e dell'Area & Superato\\
+        Unità & L'override al metodo di uguaglianza di Lampione, Sensore, Misuratore ed Area esegua un controllo sull'esistenza dell'oggetto passato & Superato\\
+        Unità & L'override al metodo di uguaglianza di Lampione, Sensore, Misuratore ed Area controlli che la classe dell'oggetto passato sia la stessa dell'oggetto di invocazione & Superato\\
+        Unità & L'override al metodo di uguaglianza di Lampione, Sensore, Misuratore ed Area esegua i controlli per determinare se entrambi gli oggetti possiedono gli stessi valori nei rispettivi campi & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Wattaggio} di Lampadina & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Wattaggio} di Lampadina & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Luminosita} di Lampadina & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Luminosita} di Lampadina & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Raggio} di Sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Raggio} di Sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{IdArea} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{IdArea} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Tipo} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Tipo} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Latitudine} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Latitudine} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Longitudine} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Longitudine} di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Nome} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Nome} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Automode} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Automode} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Lvlinf} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Lvlinf} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che ritorna il valore \textit{Lvlsup} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di impostare il valore \textit{Lvlsup} di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere l'area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista delle aree & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente l'eliminazione di un'area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente il salvataggio di un'area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente la modifica delle coordinate dell'area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere il lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista dei lampioni & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista dei lampioni in una determinata area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di aggiungere un lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di eliminare un lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere il sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista dei sensori & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista dei sensori in una determinata area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di aggiungere un sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di eliminare un sensore & Superato\\
+        & \textbf{Microservizio Logging} &\\
+        Unità & Si verifica che la costruzione dell'oggetto Log avvenga in modo corretto & Superato\\
+        Unità & Si verificano che i metodi che ritornano i valori e che consentono di modificarli funzionino nel modo desiderato & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di ottenere l'oggetto Json dal Log & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo che consente di ottenere l'oggetto in formato Map (key, value) dal Log & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottentere le misurazioni & Superato\\
+        & \textbf{Microservizio Coordinazione} &\\
+        Unità & Si verifica il corretto funzionamento del metodo per impostare l'illuminazione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere il lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere i lampioni in una specifica area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere l'area di un sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per impostare le informazioni anagrafiche di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Misuratore & Superato\\
+        nità & Si verifica il corretto funzionamento del metodo per finalizzare il payload & Superato\\
+        nità & Si verifica il corretto funzionamento del metodo per la modifica dei valori di illuminazione & Superato\\
+
+        % Unità &  & Superato\\
+        \hline
+        Integrazione & Si verifica che un misuratore abbia id 0 prima del salvataggio & Superato\\
+        Integrazione & Si verifica che un misuratore non abbia id 0 dopo il salvataggio & Superato\\
+        Integrazione & Si verifica che un sensore, un lampione o un'area abbia id 0 prima del salvataggio & Superato\\
+        Integrazione & Si verifica che un sensore, un lampione o un'area non abbia id 0 dopo il salvataggio & Superato\\
+        Integrazione & Si verifica che la ricerca di un sensore non esistente, di un lampione non esistente o di un'area non esistente ritorni un id non valido & Superato\\
+        Integrazione & Si verifica che la ricerca di un sensore esistente, di un lampione esistente o di un'area esistente ritorni un id valido & Superato\\
+        Integrazione & Si verifica che, all'inserimento di un sensore o di un lampione, il misuratore abbia id uguale & Superato\\
+        Integrazione & Si verifica che l'inserimento di un sensore, di un lampione o di un'area avvenga in modo corretto & Superato\\
+        Integrazione & Si verifica che un sensore eliminato, un lampione eliminato o un'area eliminata abbia un id non valido & Superato\\
+        Integrazione & Si verifica che il messaggio ricevuto da MQTT venga aggiunto alla coda del logging & Superato\\
+        \hline
+        Sistema & Il sistema deve mostrare un messaggio d'errore esplicativo all'utente in caso di errore di autenticazione & Superato\\
+        Sistema & Ogni cambiamento di stato di un lampione deve apparire automaticamente nell'interfaccia utente & Superato\\
+        Sistema & Deve essere possibile aggiungere nuovi sensori di luminosità o presenza a sistema & Superato\\
+        Sistema & L'intensità luminosa di un'area di illuminazione deve poter essere gestita manualmente da un utente & Superato\\
+        Sistema & Il sistema deve riportare l'intensità luminosa dell'area al valore di default una volta non rilevate persone in prossimità & Superato\\
+        Sistema & L'utente deve effettuare l'accesso per poter utilizzare le funzionalità del sistema & Superato\\
+        Sistema & L'utente deve poter inserire la locazione geografica del sensore nel sistema & Superato\\
+        Sistema & L'utente deve poter inserire il raggio d'azione del sensore nel sistema & Superato\\
+        Sistema & L'utente deve essere in grado di visualizzare quali aree sono illuminate in un dato momento & Superato\\
+        Sistema & L'utente deve poter impostare la modalità dell'area di illuminazione come manuale & Non implementato\\
+        Sistema & L'utente deve poter impostare la modalità dell'area di illuminazione come automatica & Non implementato\\
+        Sistema & L'utente deve poter modificare la luminosità dei lampioni del sistema a livello globale & Superato\\
+        Sistema & Il sistema deve essere in grado di regolare automaticamente l'intensità luminosa dei lampioni in caso rilevi valori fuori soglia di luminosità ambientale & Superato\\
+        Sistema & Il sistema deve essere in grado di rilevare automaticamente guasti nei lampioni & Non implementato\\
+        Sistema & L'utente deve essere in grado di segnalare manualmente guasti nei lampioni & Non implementato\\
+        Sistema & Il gestore deve poter visualizzare l'elenco degli impianti guasti & Non implementato\\
+        Sistema & L'utente manutentore deve essere in grado di chiudere le segnalazioni di guasto dalla lista guasti & Non implementato\\
+        Sistema & Il sistema deve essere in grado di ricevere informazioni dal sensore in modalità Push & Superato\\
+        Sistema & Il sistema deve essere in grado di ricevere informazioni dal sensore in modalità Pull & Superato\\
+        Sistema & L'applicazione deve essere visualizzabile su dispositivi mobile & Superato\\
+        Sistema & L'applicazione client deve poter essere utilizzata sulla versione 110.0 di Chrome  & Superato\\
+        Sistema & L'applicazione client deve poter essere utilizzata sulla versione 110.0 di Firefox  & Superato\\
+        Sistema & L'applicazione client deve poter essere utilizzata sulla versione 16.3 di Safari  & Superato\\
+        Sistema & L'applicazione client deve essere conforme almeno al livello AA delle WCAG  & Superato\\
+    
+        
+        \hline
+    \end{xltabular}
+\end{center}
+
+\section{Code coverage}
+
+\begin{center}
+    \begin{xltabular}{\linewidth}{|l|l|l|}
+    \hline
+    \rowcolor[gray]{0.9}
+    \textbf{Documento} & \textbf{Valore} & \textbf{Esito} \\
+    \hline
+     Microservizio Autenticazione & 80\% & Accettabile \\
+     Microservizio Anagrafe & 81\% & Accettabile \\
+     Microservizio Logging & 81\% & Accettabile \\
+     Microservizio Illuminazione & 82\% & Accettabile \\
+    \hline
+
+    \end{xltabular}
+\end{center}
