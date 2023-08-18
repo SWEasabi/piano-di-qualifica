@@ -26,6 +26,7 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
         \hline
         \textbf{Tipologia} & \textbf{Descrizione} & \textbf{Stato}\\
         \hline
+        & \textbf{Microservizio Autenticazione} & \\
         Unità & Si verifica il corretto funzionamento del metodo di autenticazione in caso di credenziali corrette fornite & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo di autenticazione in caso di credenziali errate fornite & Non implementato\\
         Unità & Si verifica il corretto funzionamento dei verificatori dei token & Superato\\
@@ -44,6 +45,7 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
         Unità & Si verifica il corretto funzionamento dei metodi per il recupero delle chiavi & Superato\\
         Unità & Si verifica il corretto funzionamento dei metodi per il recupero della password (hash) & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo per eseguire il logout & Superato\\
+        & \textbf{Microservizio Anagrafe} &\\
         Unità & Si verifica che la costruzione degli oggetti Lampione, Sensore, Misuratore od Area avvenga in modo corretto & Superato\\
         Unità & Si verifica che la costruzione di copia dell'oggetto Area avvenga in modo corretto & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo per la conversione a String dell'oggetto Area & Superato\\
@@ -92,12 +94,26 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
         Unità & Si verifica il corretto funzionamento del metodo per ottenere la lista dei sensori in una determinata area & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo che consente di aggiungere un sensore & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo che consente di eliminare un sensore & Superato\\
+        & \textbf{Microservizio Logging} &\\
         Unità & Si verifica che la costruzione dell'oggetto Log avvenga in modo corretto & Superato\\
         Unità & Si verificano che i metodi che ritornano i valori e che consentono di modificarli funzionino nel modo desiderato & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo che consente di ottenere l'oggetto Json dal Log & Superato\\
         Unità & Si verifica il corretto funzionamento del metodo che consente di ottenere l'oggetto in formato Map (key, value) dal Log & Superato\\
         Unità & Si verifica il corretto funzionamento dei metodi per ottentere le misurazioni & Superato\\
-        
+        & \textbf{Microservizio Coordinazione} &\\
+        Unità & Si verifica il corretto funzionamento del metodo per impostare l'illuminazione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere il lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere i lampioni in una specifica area & Superato\\
+        Unità & Si verifica il corretto funzionamento del metodo per ottenere l'area di un sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Lampione & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Area & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Sensore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per impostare le informazioni anagrafiche di Misuratore & Superato\\
+        Unità & Si verifica il corretto funzionamento dei metodi per ottenere le informazioni anagrafiche di Misuratore & Superato\\
+        nità & Si verifica il corretto funzionamento del metodo per finalizzare il payload & Superato\\
+        nità & Si verifica il corretto funzionamento del metodo per la modifica dei valori di illuminazione & Superato\\
+
         % Unità &  & Superato\\
         \hline
         Integrazione & Si verifica che un misuratore abbia id 0 prima del salvataggio & Superato\\
@@ -109,6 +125,7 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
         Integrazione & Si verifica che, all'inserimento di un sensore o di un lampione, il misuratore abbia id uguale & Superato\\
         Integrazione & Si verifica che l'inserimento di un sensore, di un lampione o di un'area avvenga in modo corretto & Superato\\
         Integrazione & Si verifica che un sensore eliminato, un lampione eliminato o un'area eliminata abbia un id non valido & Superato\\
+        Integrazione & Si verifica che il messaggio ricevuto da MQTT venga aggiunto alla coda del logging & Superato\\
         \hline
         Sistema & Il sistema deve mostrare un messaggio d'errore esplicativo all'utente in caso di errore di autenticazione & Superato\\
         Sistema & Ogni cambiamento di stato di un lampione deve apparire automaticamente nell'interfaccia utente & Superato\\
@@ -151,7 +168,7 @@ I test di regressione hanno l'obiettivo di identificare eventuali errori ausati 
      Microservizio Autenticazione & 80\% & Accettabile \\
      Microservizio Anagrafe & 81\% & Accettabile \\
      Microservizio Logging & 81\% & Accettabile \\
-     Microservizio Illuminazione &  &  \\
+     Microservizio Illuminazione & 82\% & Accettabile \\
     \hline
 
     \end{xltabular}
